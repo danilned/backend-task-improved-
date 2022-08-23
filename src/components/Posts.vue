@@ -92,7 +92,9 @@ export default defineComponent({
         this.emitter.emit('showError', [this.$store.state.errors[data.status].text, data.status]);
       })
       .then(() => {
+        const index = this.$store.state.posts.findIndex((cur: postsAttributes) => cur.post_id === postId);
         this.posts.splice(key, 1);
+        this.$store.state.posts.splice(index, 1);
       });
     },
     async postStatus(postId: number, key: number) {
