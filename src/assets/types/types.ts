@@ -1,0 +1,1 @@
+export type errors = { [key: number]: { text: string } }

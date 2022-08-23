@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("./fonts/Roboto-Thin.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+input,
+textarea {
+  padding: 4px 2px;
+  font-size: 15px;
+}
+
+button:not(.cancel) {
+  padding: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:not(.cancel):hover {
+  background: #363636;
+  color: #fff;
+}
+
+input,
+button {
+  font-family: "Roboto";
+  border-radius: 2px;
+  border: 1px solid #363636;
+  outline: none;
+}
+
+button.cancel {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #0042cc;
+  font-family: "Roboto";
+  font-size: 13px;
+  padding: 4px 8px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px dashed #0042cc;
+  transition: 0.25s;
+}
+
+a.active {
+  color: #fff;
+  border-color: #fff;
+  background: #008bfe;
+}
+
+h1 {
+  font-family: "Roboto-Thin";
+  text-align: center;
+}
+
+p,
+.bold {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+.input-error {
+  position: absolute;
+  transform: translate(-50%, 2px);
+  left: 50%;
+  font-family: "Roboto";
+  font-size: 10px;
+  background: #cd5c5c;
+  color: #fff;
+  padding: 1px 10px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.input-show {
+  opacity: 1;
+}
